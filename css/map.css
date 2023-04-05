@@ -1,0 +1,71 @@
+/* 門市地圖 */
+#mapcontainer {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#map {
+    margin-left: 10px;
+    width: 55%;
+    height: 500px;
+}
+
+#cityselect {
+    margin: 20px 0;
+}
+
+#city {
+    font-size: 18px;
+    width: 45%;
+    padding: 2px;
+    padding-left: 5px;
+}
+
+#shopbox {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+#shopinfo {
+    width: 45%;
+    height: 500px;
+}
+
+#shoplocbox {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:10px;
+}
+
+#citybox {
+    overflow: auto;
+    height:425px;
+}
+
+#div4 {
+    text-align: end;
+    margin-right: 20px;
+}
+
+#seeonmap {
+    color: black;
+    background-color: rgb(225, 225, 225);
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    align-self: end;
+    outline: 0;
+    padding: 0px;
+    margin: 0px 0px;
+    /* width: 100%; */
+    max-width: fit-content;
+}
+
+#seeonmap:hover {
+    background-color: gray;
+    color: white;
+}

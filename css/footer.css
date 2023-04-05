@@ -1,0 +1,30 @@
+/*Footer 關於我們*/
+footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #717171;
+    bottom: 0;
+  }
+  
+  footer table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  footer table th {
+    font-size: 18px;
+    text-decoration: underline;
+    color: #f2f2f2;
+  }
+  
+  footer table td {
+    color: #f2f2f2;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  footer table td li {
+    list-style-type: none;
+  }

@@ -1,0 +1,81 @@
+/* Header、Nav CSS */
+header {
+  position: sticky;
+  text-align: center;
+  background-color: white;
+  z-index: 1;
+}
+
+header img {
+  width: 400px;
+}
+
+/* The navbar container */
+nav {
+  overflow: hidden;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  background-color: #f7838d;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+/* Navbar links */
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Links - change color on hover */
+nav a:hover {
+  background-color: #ddd;
+}
+
+.navnext {
+  padding-top: 50px;
+}
+
+#memberbtn {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#membercenterbtn {
+  display: none;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 15px 30px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#memberbtn:hover, #membercenterbtn:hover {
+  background-color: #ddd;
+}
+

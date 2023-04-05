@@ -1,0 +1,82 @@
+/* 切版 */
+#griditem {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.sidenav {
+    background-color: #fff5f5;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.sidenav a,
+.sidenav span,
+.temCake {
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+    transition: 0.4s
+}
+
+.sidenav a:hover,
+.temCake:hover {
+    color: black;
+    background-color: #ddd;
+}
+
+.accnone {
+    display: none;
+}
+
+.accshow {
+    display: block;
+}
+
+.acccontent {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+.acc {
+    background-color: #fff9f9;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+div .acc:hover {
+    color: black;
+    background-color: #efefef;
+}
+
+#notice {
+    background-color: #fff1ef;
+}
+
+#notice img {
+    display: block;
+    width: 80%;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noscroll {
+    overflow: hidden;
+    /* position: fixed;
+    overflow-y: scroll; */
+    width: 100%;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+}
