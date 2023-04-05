@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品購買</title>
+    <link rel="icon" type="image/png" href="image/icon/1.png">
+    <style>
+        @import 'css/header.css';
+        @import 'css/signup.css';
+        @import 'css/notice.css';
+        @import 'css/product.css';
+        @import 'css/footer.css';
+    </style>
+</head>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script src="js/header.js" type="text/babel"></script>
+<script src="js/nav.js"></script>
+<script src="js/WinterProduct.js" type="text/babel"></script>
+<script src="js/PoundProduct.js" type="text/babel"></script>
+<script src="js/TartProduct.js" type="text/babel"></script>
+<script src="js/CookieProduct.js" type="text/babel"></script>
+<script src="js/QA.js" type="text/babel"></script>
+<script src="js/footer.js" type="text/babel"></script>
+
+<script src="js/json/WinterCake.js"></script>
+<script src="js/json/PoundCake.js"></script>
+<script src="js/json/FruitTart.js"></script>
+<script src="js/json/CookieT.js"></script>
+<script src="js/json/QAlist.js"></script>
+
+
+<script>
+
+    function mycakeAcc() {
+        // FixScroll();
+        Clearside();
+        var x = document.getElementById("patisserie");
+
+        if (x.style.maxHeight) {
+            x.style.maxHeight = null;
+        }
+        else {
+            x.style.maxHeight = x.scrollHeight + "px"
+        }
+        // unFixScroll();
+    }
+
+    function opentab(event) {
+        var direct = event.target.getAttribute("href").slice(1)
+        var alltab = document.querySelector("#rightgrid").querySelectorAll("div[class*=acc]")
+
+        FixScroll();
+        Clearside();
+
+        for (let i = 0; i < alltab.length; i++) {
+            if (alltab[i].id == direct) {
+                alltab[i].removeAttribute("class");
+                alltab[i].className = "accshow";
+                event.target.style = `color: black; background-color: #ddd;`;
+                document.title = event.target.text;
+            }
+            else {
+                alltab[i].removeAttribute("class");
+                alltab[i].className = "accnone";
+            }
+        }
+
+        unFixScroll();
+    }
+
+    function FixScroll() {
+        document.body.classList.add("noscroll");
+    }
+
+    function unFixScroll() {
+        setTimeout(function () {
+            document.body.removeAttribute("class");
+            window.scrollTo(0, 0)
+        }, 0.1);
+    }
+
+    function Clearside() {
+        var clrside = document.querySelector(".sidenav").querySelectorAll("a")
+
+        for (let i = 0; i < clrside.length; i++) {
+            clrside[i].style = `color: #818181; background-color: none;`;
+        }
+    }
+
+</script>
+
+<body>
+    <div id="headerNav"></div>
+
+    <div id="griditem">
+
+        <div class="sidenav">
+            <a href="#notice" onclick="opentab(event)">訂購須知</a>
+            <span>-----------------------</span>
+            <a href="#onlyWinter" onclick="opentab(event)">冬季限定</a>
+            <span>-----------------------</span>
+            <a href="#patisserie" id="temCake" class="temCake" onclick="mycakeAcc()">甜點蛋糕</a>
+            <div id="patisserie" class="acccontent">
+                <a href="#poundcake" class="acc" onclick="opentab(event)">磅蛋糕</a>
+                <a href="#FruitTart" class="acc" onclick="opentab(event)">水果塔</a>
+                <a href="#CookieT" class="acc" onclick="opentab(event)">餅乾小點</a>
+            </div>
+            <a href="#QA" onclick="opentab(event)">常見問題</a>
+        </div>
+
+        <div id="rightgrid" class="main">
+            <div id="notice" class="accshow">
+                <img src="./image/icon/NoticeV3.png" alt="訂購須知">
+            </div>
+            <div id="onlyWinter" class="accnone">
+                <div id="WinterCake"></div>
+            </div>
+            <div id="poundcake" class="accnone">
+                <div id="PoundcakeTab"></div>
+            </div>
+            <div id="FruitTart" class="accnone">
+                <div id="FruitTartTab"></div>
+            </div>
+            <div id="CookieT" class="accnone">
+                <div id="CookieTab"></div>
+            </div>
+            <div id="QA" class="accnone">
+                <div id="mostQA"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="myModal" class="itemModal"></div>
+    <a href="#" target="_blank">
+        <div id="shopcart"></div>
+    </a>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>
